@@ -19,7 +19,7 @@
 ```
 - Соберите и отправьте созданный образ в свой dockerhub-репозитории c tag 1.0.0
 
-Ссылка для проверки: https://hub.docker.com/repository/docker/netolearning777/custom-nginx/tags/1.0.0/sha256-10122b5afba00b20fe747de0b12e2009c43584d4d3a62ba646b38de243bc6855
+[cсылка для проверки](https://hub.docker.com/repository/docker/netolearning777/custom-nginx/tags/1.0.0/sha256-10122b5afba00b20fe747de0b12e2009c43584d4d3a62ba646b38de243bc6855)
 
 ### Задача 2
 1. Запустите ваш образ custom-nginx:1.0.0 командой docker run в соответвии с требованиями:
@@ -48,21 +48,26 @@
 2. Nginx скомандовал своим рабочим процессам (worker processes) закрыться, после чего завершил работу сам.
 3. Контейнер живет пока работает его главный процесс (тот, что указан в инструкции CMD или ENTRYPOINT образа). Как только Nginx штатно завершил свою работу и вышел (exit), Docker тут же остановил сам контейнер.
 </em>
+
 ![](https://github.com/netolearning777/Docker_Compose-hw/blob/main/img/VirtualBox_ubuntu-desktop-24_27_10_2026_14_16_00.png)
 
 4. Перезапустите контейнер
 5. Зайдите в интерактивный терминал контейнера "custom-nginx-t2" с оболочкой bash.
 6. Установите любимый текстовый редактор(vim, nano итд) с помощью apt-get.
-![](https://github.com/netolearning777/Docker_Compose-hw/blob/main/img/VirtualBox_ubuntu-desktop-24_27_10_2026_14_46_09.png)
+![](https://github.com/netolearning777/Docker_Compose-hw/blob/main/img/VirtualBox_ubuntu-desktop-24_27_10_2026_14_16_00.png)
 7. Отредактируйте файл "/etc/nginx/conf.d/default.conf", заменив порт "listen 80" на "listen 81".
 8. Запомните(!) и выполните команду ```nginx -s reload```, а затем внутри контейнера ```curl http://127.0.0.1:80 ; curl http://127.0.0.1:81```.
 9. Выйдите из контейнера, набрав в консоли  ```exit``` или Ctrl-D.
 ![](https://github.com/netolearning777/Docker_Compose-hw/blob/main/img/VirtualBox_ubuntu-desktop-24_27_10_2026_15_20_17.png)
 10. Проверьте вывод команд: ```ss -tlpn | grep 127.0.0.1:8080``` , ```docker port custom-nginx-t2```, ```curl http://127.0.0.1:8080```. Кратко объясните суть возникшей проблемы.
-11. * Это дополнительное, необязательное задание. Попробуйте самостоятельно исправить конфигурацию контейнера, используя доступные источники в интернете. Не изменяйте конфигурацию nginx и не удаляйте контейнер. Останавливать контейнер можно. [пример источника](https://www.baeldung.com/linux/assign-port-docker-container)
-12. Удалите запущенный контейнер "custom-nginx-t2", не останавливая его.(воспользуйтесь --help или google)
 
-В качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод.
+![](https://github.com/netolearning777/Docker_Compose-hw/blob/main/img/VirtualBox_ubuntu-desktop-24_27_10_2026_15_58_37.png)
+
+<em> В конфигурации Nginx порт listen 81, а Docker перенаправляет трафик с порта 8080 хоста на порт 80 внутри контейнера. Получается нестыковка: Docker-proxy стучится на порт 80 внутри контейнера, но там никого нет, а Nginx в это время слушает порт 81. </em>
+
+11. Удалите запущенный контейнер "custom-nginx-t2", не останавливая его.(воспользуйтесь --help или google)
+
+![]()
 
 ## Задача 4
 
