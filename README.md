@@ -34,6 +34,9 @@
 Убедитесь с помощью curl или веб браузера, что индекс-страница доступна.
 В качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод.
 
+![](https://github.com/netolearning777/Docker_Compose-hw/blob/main/img/VirtualBox_ubuntu-desktop-24_27_10_2026_13_42_20.png)
+![](https://github.com/netolearning777/Docker_Compose-hw/blob/main/img/VirtualBox_ubuntu-desktop-24_27_10_2026_13_48_22.png)
+
 ### Задача 3
 Воспользуйтесь docker help или google, чтобы узнать как подключиться к стандартному потоку ввода/вывода/ошибок контейнера "custom-nginx-t2".
 Подключитесь к контейнеру и нажмите комбинацию Ctrl-C.
