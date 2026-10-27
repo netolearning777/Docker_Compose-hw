@@ -67,7 +67,7 @@
 
 11. Удалите запущенный контейнер "custom-nginx-t2", не останавливая его.(воспользуйтесь --help или google)
 
-![]()
+![](https://github.com/netolearning777/Docker_Compose-hw/blob/main/img/VirtualBox_ubuntu-desktop-24_27_10_2026_16_14_07.png)
 
 ## Задача 4
 
