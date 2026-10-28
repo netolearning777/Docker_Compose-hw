@@ -114,10 +114,12 @@ services:
 2. Отредактируйте файл compose.yaml так, чтобы были запущенны оба файла. (подсказка: https://docs.docker.com/compose/compose-file/14-include/)
 
 <em>
-В compose.yaml добавлен блок include.
+В файл compose.yaml добавлен блок include.
 
+```
 include:
   - path: docker-compose.yaml
+```
 </em>
 
 
