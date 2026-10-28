@@ -86,7 +86,7 @@
 1. Создайте отдельную директорию(например /tmp/netology/docker/task5) и 2 файла внутри него.
 "compose.yaml" с содержимым:
 ```
-version: "3"
+
 services:
   portainer:
     network_mode: host
@@ -96,7 +96,7 @@ services:
 ```
 "docker-compose.yaml" с содержимым:
 ```
-version: "3"
+
 services:
   registry:
     image: registry:2
@@ -105,7 +105,7 @@ services:
     - "5000:5000"
 ```
 
-И выполните команду "docker compose up -d". Какой из файлов был запущен и почему? (подсказка: https://docs.docker.com/compose/compose-application-model/#the-compose-file )
+И выполните команду "docker compose up -d". Какой из файлов был запущен и почему? [подсказка](https://docs.docker.com/compose/compose-application-model/#the-compose-file)
 
 2. Отредактируйте файл compose.yaml так, чтобы были запущенны оба файла. (подсказка: https://docs.docker.com/compose/compose-file/14-include/)
 
