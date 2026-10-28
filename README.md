@@ -86,7 +86,6 @@
 1. Создайте отдельную директорию(например /tmp/netology/docker/task5) и 2 файла внутри него.
 "compose.yaml" с содержимым:
 ```
-
 services:
   portainer:
     network_mode: host
@@ -96,7 +95,6 @@ services:
 ```
 "docker-compose.yaml" с содержимым:
 ```
-
 services:
   registry:
     image: registry:2
@@ -106,6 +104,12 @@ services:
 ```
 
 И выполните команду "docker compose up -d". Какой из файлов был запущен и почему? [подсказка](https://docs.docker.com/compose/compose-application-model/#the-compose-file)
+
+<em>
+Когда в папке находятся сразу два конфигурационных файла (compose.yaml и docker-compose.yaml) Docker Compose выбирает по умолчанию compose.yaml. 
+</em>
+
+![](https://github.com/netolearning777/Docker_Compose-hw/blob/main/img/VirtualBox_ubuntu-desktop-24_28_10_2026_16_05_08.png)
 
 2. Отредактируйте файл compose.yaml так, чтобы были запущенны оба файла. (подсказка: https://docs.docker.com/compose/compose-file/14-include/)
 
