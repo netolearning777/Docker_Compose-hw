@@ -122,7 +122,7 @@ include:
 ```
 </em>
 
-
+![](https://github.com/netolearning777/Docker_Compose-hw/blob/main/img/VirtualBox_ubuntu-desktop-24_28_10_2026_16_31_28.png)
 
 3. Выполните в консоли вашей хостовой ОС необходимые команды чтобы залить образ custom-nginx как custom-nginx:latest в запущенное вами, локальное registry. Дополнительная документация: https://distribution.github.io/distribution/about/deploying/
 4. Откройте страницу "https://127.0.0.1:9000" и произведите начальную настройку portainer.(логин и пароль адмнистратора)
