@@ -134,8 +134,6 @@ include:
 5. Откройте страницу "http://127.0.0.1:9000/#!/home", выберите ваше local  окружение. Перейдите на вкладку "stacks" и в "web editor" задеплойте следующий компоуз:
 
 ```
-version: '3'
-
 services:
   nginx:
     image: 127.0.0.1:5000/custom-nginx
@@ -144,8 +142,14 @@ services:
 ```
 6. Перейдите на страницу "http://127.0.0.1:9000/#!/2/docker/containers", выберите контейнер с nginx и нажмите на кнопку "inspect". В представлении <> Tree разверните поле "Config" и сделайте скриншот от поля "AppArmorProfile" до "Driver".
 
+![](https://github.com/netolearning777/Docker_Compose-hw/blob/main/img/VirtualBox_ubuntu-desktop-24_29_10_2026_14_13_37.png)
+
+![](https://github.com/netolearning777/Docker_Compose-hw/blob/main/img/VirtualBox_ubuntu-desktop-24_29_10_2026_14_13_58.png)
+
+![](https://github.com/netolearning777/Docker_Compose-hw/blob/main/img/VirtualBox_ubuntu-desktop-24_29_10_2026_14_14_33.png)
+
 7. Удалите любой из манифестов компоуза(например compose.yaml).  Выполните команду "docker compose up -d". Прочитайте warning, объясните суть предупреждения и выполните предложенное действие. Погасите compose-проект ОДНОЙ(обязательно!!) командой.
 
-В качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод, файл compose.yaml , скриншот portainer c задеплоенным компоузом.
+8 качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод, файл compose.yaml , скриншот portainer c задеплоенным компоузом.
 
 ---
